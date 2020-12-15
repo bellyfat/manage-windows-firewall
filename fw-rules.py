@@ -1,4 +1,4 @@
-def chkeckAdmin():
+def checkAdmin():
     try:
         isAdmin = ctypes.windll.shell32.IsUserAnAdmin()
     except AttributeError:
@@ -35,6 +35,6 @@ def editRule(ruleName, enabled=True):
         stderr=DEVNULL
     )
 
-chkeckAdmin()
+checkAdmin()
 #addRule("ruleName", "filePath")
 editRule("443 - Dell Open Manage", 1)
